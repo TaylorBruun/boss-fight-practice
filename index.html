@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
 
 <style>
@@ -30,7 +31,7 @@
 
 
   </head>
-  <body class="debug bg-dark">
+  <body class="bg-dark">
 
 <header></header>
 
@@ -48,14 +49,14 @@
             <div class="hero">
                 🐱‍🐉
             </div>
-            <div class="progress">
-                <div id="hero-hp-bar" class="progress-bar bg-danger" style="width: 30%">
+            <div id='hero-hp-bar' class="progress">
+                <div  class="progress-bar bg-danger" style="width: 30%">
                     HP
                 </div>
             </div>
             <div id="hero-stats" class="d-flex justify-content-between">
-                <p>HP:</p>
-                <p>DMG: </p>
+                <p id="hero-gold">Gold: 0</p>
+                <p id="hero-dmg">DMG: </p>
             </div>
         </div>
         <!-- Boss panel -->
@@ -63,20 +64,26 @@
             <div onclick="hitBoss(hero)" class="text-center p-5">
                <p class="boss">👾</p> 
             </div>
+            <p class="text-center mb-1 text-primary">Attack</p>
+            <!-- <div id="boss-attack-bar" class="mx-5 mb-5 progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 100%">
+                    
+                </div>
+            </div> -->
             <div id="boss-hp-bar" class="progress">
                 <div class="progress-bar bg-danger" style="width: 30%">
                     HP
                 </div>
             </div>
             <div id="boss-stats" class="d-flex justify-content-between">
-                <p>HP: </p>
-                <p>DMG: </p>
+                <p id="boss-lvl">LVL: 1</p>
+                <p id="boss-dmg">DMG: </p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col">
-<button class="btn btn-primary p-3 m-1">Shop item</button>
+<button onclick="buyHealth()" class="btn btn-primary p-3 m-1"><i class=" display-1 mdi mdi-hospital"></i> <br> 10 Health! <br> 20 Gold</button>
 <button class="btn btn-primary p-3 m-1">Shop item</button>
 <button class="btn btn-primary p-3 m-1">Shop item</button>
 <button class="btn btn-primary p-3 m-1">Shop item</button>
@@ -84,7 +91,11 @@
 
         </div>
     </div>
-
+<div class="row">
+    <div class="col pt-5 text-center">
+        <button onclick="reset()" class="btn btn-warning p-5 m-1">Reset</button>
+    </div>
+</div>
 
 
 </main>
