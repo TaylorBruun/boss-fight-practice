@@ -5,6 +5,8 @@ div{
 
 .boss{
     font-size: 15em;
+    user-select: none;
+    cursor: pointer;
 }
 
 .hero    {

@@ -49,7 +49,7 @@
                 🐱‍🐉
             </div>
             <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 30%">
+                <div id="hero-hp-bar" class="progress-bar bg-danger" style="width: 30%">
                     HP
                 </div>
             </div>
@@ -60,10 +60,10 @@
         </div>
         <!-- Boss panel -->
         <div class="col-md-8">
-            <div class="boss text-center p-5">
-                👾
+            <div onclick="hitBoss(hero)" class="text-center p-5">
+               <p class="boss">👾</p> 
             </div>
-            <div class="progress">
+            <div id="boss-hp-bar" class="progress">
                 <div class="progress-bar bg-danger" style="width: 30%">
                     HP
                 </div>
