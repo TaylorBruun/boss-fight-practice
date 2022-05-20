@@ -1,3 +1,12 @@
-main{
-    color: teal
+div{
+    color:bisque
+}
+
+
+.boss{
+    font-size: 15em;
+}
+
+.hero    {
+    font-size :15em;
 }
